@@ -3,7 +3,7 @@ async function getWeather(city) {
     
     try {
         
-        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=3dc63db5365804e5044cf1e81335fcca`);
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`);
         
         if (!response.ok) {
             throw new Error('Weather data not found. Please check the city name');
