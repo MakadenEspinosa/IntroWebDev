@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="WonderfulWeather.css">
+</head>
+<body>
+    
+    <header role="banner">
+        <div class="container">
+            <h1>Wonderful Weather</h1>
+            <p class="tagline">Your daily weather companion</p>
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+        <div class="container">
+            <section id="weather-section" class="weatherDisplay" aria-labelledby="weather-heading">
+                <h2 id="weather-heading">Check Today's Weather</h2>
+                <input type="text" id="city-input" placeholder="Enter city name">
+                <button class="check-button" id="check-button">Check Weather</button>
+                <p id="weather-error" style="color:red;"></p>
+                <p id="weather-result"></p>
+                <img id="weather-image" src="" alt="Weather Icon" width= "100px" height= "100px" style="display: none;" />
+            </section>
+        </div>
+
+        <div id="loading" class="loading" style="display: none;">
+            <div class="weather-load"></div>
+            <p>Loading weather data...</p>
+        </div>
+
+        <div id="error" class="error-message" style="display: none;"></div>
+    </main>
+
+    <script src="WonderfulWeatherAPI.js"></script>
+    <script src="WonderfulWeatherMain.js"></script>
+</body>
+</html>
