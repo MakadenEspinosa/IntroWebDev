@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang = en>
+    <head> 
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content="width=device-width, initial scale =1.0">
+        <meta name = "description" content="CSC210 - Intro to Web Presentation and Development - B1">
+        <meta name = "keyboard" content="Neumont, CSC210 web dev, web development, student, portfolio, HTML5, CSS3">
+        <meta name = "author" content = "Makaden Espinosa">
+
+        <!-- The OG here means Open Graph, which tags control for social media channels. -->
+         <meta property="og.title" content="CSC210 - Intro to Web Presentation and Development">
+         <meta property="og:description" content="This could be your personal portfolio to showcase your web dev project">
+         <meta property="og:type" content="website">
+
+         <!-- If you have a favorite icon or a picture that always represents you, this is a good place to add it-->
+          <!--<link rel = "icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/1090/svg' viewBox="> -->
+            <link rel="stylesheet" href="style.css">
+            <title> Neumont CSC210 - Introduction to Web Development and Presentation</title>
+    </head>
+    <body> 
+        <!--<h1> Hello! This is gonna be lit!</h1>
+        <p>Welcome to my HTMLS & CSS3 website</p>
+
+        <a href="#main-content" class="skip-link">Skip to main content</a> -->
+
+        <header role="banner"> 
+            <div class = "container">
+                <h1>Makaden Espinosa</h1>
+                <p class="tagline">CSC210 Student</p>
+            </div>
+        </header>
+
+        <nav role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <ul>
+                    <li><a href="AboutMe.html" aria-describedby="about-desc">About Me</a></li>
+                    <li><a href="Skills.html" aria-describedby="skills-desc">My Skills</a></li>
+                    <li><a href="Projects.html" aria-describedby="projects-desc">Amazing Projects</a></li>
+                    <li><a href="#contact" aria-describedby="contact-desc">Contact Me!</a></li>
+
+                </ul>
+            </div>
+        </nav>
+
+        <main id="main-content" role="main">
+            <div class="container">
+                <section id="about" aria-labelledby="about-heading">
+                    <h2 id="about-heading">Welcome!</h2>
+                    <div class="about-text">
+                        <p>Thank you for viewing my page, look around and learn about me!</p>
+
+                        <details>
+                            <summary>Bio</summary>
+                            <p>
+                                I am Makaden Espinosa (he/him), a current student at Neumont College!
+                                I am enrolled in the Softeare Engineering program, and currently studying for my bachelors degree.
+                                I enjoy video games, movies, golfing and music. It is a pleasure to have your visit, so if you would like to learn more about me check out my <strong>About Me</strong> page linked above!<br>
+
+                                <img src="ThumbsUp.jpg" alt="Thumbs up" width="200" height="100" title="Good Job!">
+                            </p>
+                        </details>
+                    </div>
+
+                    <aside class="intersets" aria-labelledby="intersets-heading">
+                        <h3 id="intersets-headign">Favorite Websites</h3>
+                        <ul>
+                            <li>
+                                <span role="img" aria-label="Streaming">▶</span>
+                                <a href="https://www.youtube.com/" target="_blank">Youtube</a>
+                            </li>
+                            <li>
+                                <span role="img" aria-label="Streaming">📹</span>
+                                <a href="https://www.crunchyroll.com/" target="_blank">Crunchyroll</a>
+                            </li>
+                            <li>
+                                <span role="img" aria-label="Streaming">▶️</span>
+                                <a href="https://www.amazon.com/gp/video/storefront/" target="_blank">Prime Video</a>
+                            </li>
+                            <li>
+                                <span role="img" aria-label="Social Media">📷</span>
+                                <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+                            </li>
+                            <li>
+                                <span role="img" aria-label="Repository">💻</span>
+                                <a href="https://github.com/" target="_blank">github</a>
+                            </li>
+                            <li>
+                                <span role="img" aria-label="Repository">♟️</span>
+                                <a href="https://www.chess.com/play" target="_blank">Chess</a>
+                            </li>
+                            <li>
+                                <span role="img" aria-label="Shopping">🛍️</span>
+                                <a href="https://www.amazon.com" target="_blank">Amazon</a>
+                            </li>
+                            <li>
+                                <span role="img" aria-label="Entertainment">🕹️</span>
+                                <a href="https://www.nintendo.com/us/" target="_blank">Nintendo</a>
+                            </li>
+
+                        </ul>
+                    </aside>
+                </section>
+            </div>
+        <button class="theme-toggle" id="theme-toggle">Toggle Dark Mode</button>
+        </main>
+
+        <footer>
+  <p>Copyright ©2025 by Makaden Espinosa</p>
+  <p>Contact me: <a href="mailto:mespinosa@student.neumont.edu">Student Email</a> <a href="https://discordapp.com/users/sweettealove" target="_blank">Discord</a></p>
+</footer>
+<script src="dark.js"></script>
+    </body>
+</html>
+<!DOCTYPE html>
+<!DOCTYPE html>

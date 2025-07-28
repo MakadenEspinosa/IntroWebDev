@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-image: url('GolfCourse.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: "Segoe UI", sans-serif;
+    background-color: #fcfcfc;
+    color: #fcfcfc;
+    line-height: 1.6;
+    padding: 2rem;
+}
+
+header {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 2.5rem;
+    text-align: center;
+    background-color: #5eb1bf;
+    color: #f6e879;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+header h1{
+    font-size:2rem;
+}
+
+.tagline {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 1rem 0 2rem 0;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: blue;
+    font-weight:bold;
+    transition: color 0.3s ease;
+}
+
+nav a :hover {
+    color:  violet;
+    text-decoration: underline;
+}
+
+/* Main layout */
+main {
+    max-width: 900px;
+    margin: auto;
+}
+
+.container {
+    max-width: 900px;
+    margin:auto;
+    padding: 1rem;
+}
+
+#about {
+    background-color: #5eb1bf;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-left: 5px solid #0dabab;
+    border-radius: 5px;
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+}
+
+aside.intrests {
+    background-color: #eaf2fc;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-left: 4px solid violet;
+    border-radius: 4px;
+}
+
+aside.interests ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+aside.interests li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.overiew-cont {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    justify-content: center;
+}
+
+details {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: #042a2b;
+    border:1px solid #ccc;
+    border-radius: 4px;
+}
+
+details summary{
+    cursor: pointer;
+    font-weight: bold;
+}
+
+h2, h3, h4 {
+    color: #f6e879;
+    margin-bottom: 1rem;
+}
