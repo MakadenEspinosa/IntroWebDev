@@ -36,7 +36,7 @@ function displayWeather(weatherData) {
     
         const condition = (weatherData.weather && weatherData.weather[0] && weatherData.weather[0].main) ? weatherData.weather[0].main.toLowerCase() : '';
         console.log(condition);
-        let imgSrc = '';
+        let imgSrc = ''; //images will be stored locally
         if (condition === 'clear') imgSrc = 'sunny.gif';
         else if (condition === 'rain') imgSrc = 'drop.gif';
         else if (condition === 'clouds') imgSrc = 'cloudy.webp';
