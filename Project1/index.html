@@ -14,7 +14,7 @@
 
          <!-- If you have a favorite icon or a picture that always represents you, this is a good place to add it-->
           <!--<link rel = "icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/1090/svg' viewBox="> -->
-            <link rel="stylesheet" href="style.css">
+            <link rel="stylesheet" href="css/style.css">
             <title> Neumont CSC210 - Introduction to Web Development and Presentation</title>
     </head>
     <body> 
@@ -56,10 +56,19 @@
                                 I am enrolled in the Softeare Engineering program, and currently studying for my bachelors degree.
                                 I enjoy video games, movies, golfing and music. It is a pleasure to have your visit, so if you would like to learn more about me check out my <strong>About Me</strong> page linked above!<br>
 
-                                <img src="ThumbsUp.jpg" alt="Thumbs up" width="200" height="100" title="Good Job!">
+                                <img src="images/ThumbsUp.jpg" alt="Thumbs up" width="200" height="100" title="Good Job!">
                             </p>
                         </details>
                     </div>
+
+
+                    <section id="quote-section" class="quote-section" style="display:none; margin: 1em 0;">
+                        <h3>Daily Quote</h3>
+                        <div id="loading" style="display:none;">Loading...</div>
+                        <div id="error" style="display:none; color: red;"></div>
+                        <div id="quote-result" style="font-style: italic;"></div>
+                    </section>
+
 
                     <aside class="intersets" aria-labelledby="intersets-heading">
                         <h3 id="intersets-headign">Favorite Websites</h3>
@@ -101,6 +110,7 @@
                     </aside>
                 </section>
             </div>
+
         <button class="theme-toggle" id="theme-toggle">Toggle Dark Mode</button>
         </main>
 
@@ -108,7 +118,14 @@
   <p>Copyright ©2025 by Makaden Espinosa</p>
   <p>Contact me: <a href="mailto:mespinosa@student.neumont.edu">Student Email</a> <a href="https://discordapp.com/users/sweettealove" target="_blank">Discord</a></p>
 </footer>
-<script src="dark.js"></script>
+<script src="js/dark.js"></script>
+<script src="js/api.js"></script>
+<script>
+  // Fetch and display the daily quote when the page loads
+  window.addEventListener('DOMContentLoaded', function() {
+    getQuote();
+  });
+</script>
     </body>
 </html>
 <!DOCTYPE html>
