@@ -76,6 +76,7 @@ main {
     margin-bottom: 2rem;
     border-left: 5px solid #004a99;
     border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 #slideshow {
@@ -86,7 +87,22 @@ main {
     padding: 1.5rem;
     border-left: 5px solid #004a99;
     border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
 }
+
+body.dark-theme #about {
+    background-color: #23272f;
+    color: #e0e0e0;
+    border-left: 5px solid #66b3ff;
+}
+
+body.dark-theme #slideshow {
+    background-color: #23272f;
+    color: #e0e0e0;
+    border-left: 5px solid #66b3ff;
+}
+
+
 
 .about-text p {
     margin-bottom: 1rem;
@@ -121,6 +137,13 @@ details {
     border-radius: 4px;
 }
 
+details.dark-theme {
+    padding: 0.5rem;
+    background-color: #3a3a3a;
+    color: #e0e0e0;
+    border: 1px solid #66b3ff;
+}
+
 details summary{
     cursor: pointer;
     font-weight: bold;
@@ -141,6 +164,11 @@ h2, h3 {
     --color-primary: #007bff;
     --color-accent: #eaf3fc;
     --shadow: 0 2px 10pc rgba(0, 0, 0, 0.1);
+}
+
+h2.dark-theme, h3.dark-theme {
+    color: #05c793;
+    margin-bottom: 1rem;
 }
 
 body.dark-theme {

@@ -14,7 +14,7 @@
 
          <!-- If you have a favorite icon or a picture that always represents you, this is a good place to add it-->
           <!--<link rel = "icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/1090/svg' viewBox="> -->
-            <link rel="stylesheet" href="AboutMe.css">
+            <link rel="stylesheet" href="css/AboutMe.css">
             <title> Neumont CSC210 - Introduction to Web Development and Presentation</title>
     </head>
     <body> 
@@ -36,7 +36,7 @@
                     <li><a href="index.html" aria-describedby="about-desc">Back to Homepage</a></li>
                     <li><a href="Skills.html" aria-describedby="skills-desc">My Skills</a></li>
                     <li><a href="Projects.html" aria-describedby="projects-desc">Amazing Projects</a></li>
-                    <li><a href="#contact" aria-describedby="contact-desc">Contact Me!</a></li>
+                    <li><a href="#contact-footer" aria-describedby="contact-desc">Contact Me!</a></li>
 
                 </ul>
             </div>
@@ -79,14 +79,21 @@
                 </section>
             </div>
 
-            <div class = "pic-container">
+
+            <div class="pic-container">
                 <section id="pictures" aria-labelledby="pictures-of-me">
                     <h2>Here are Pictures of Me!</h2>
-                        <div class="picture">
-                            <img src="Purple.jpeg" alt="Me in that purple shirt." width="200" hieght = "400" title="Please like this shirt" style="border: 2rem blue;">
-                            <img src="NotPurple.jpeg" alt="The picture of without the purple shirt" width="200" hieght = "400" title="Don't like this shirt" style="border: 2rem blue;">
-                            <img src="Fish.jpeg" alt="Mahimahi" width="200" hieght = "400" title="Fish" style="border: 2rem blue;">
+                    <div class="slideshow-container">
+                        <div class="mySlides fade">
+                            <img src="images/Purple.jpeg" alt="Me in that purple shirt." width="300" height="400" title="Please like this shirt" style="border: 2rem blue;">
                         </div>
+                        <div class="mySlides fade">
+                            <img src="images/NotPurple.jpeg" alt="The picture of without the purple shirt" width="300" height="400" title="Don't like this shirt" style="border: 2rem blue;">
+                        </div>
+                        <div class="mySlides fade">
+                            <img src="images/Fish.jpeg" alt="Mahimahi" width="300" height="400" title="Fish" style="border: 2rem blue;">
+                        </div>
+                    </div>
                 </section>
             </div>
             <div>
@@ -99,14 +106,15 @@
                             Today, on top of studying I am also working as a Esports communications officer, and participte in a few clubs aroung campus. My two favorite activities at the school are music club, where I am currently the vice president, and esports practice with the SSBU team. <br>
                             Thank you for reading, and I hope you have a wonderful day!
                         </p>
-                        <img src="Tiger.gif" alt="Tiger Celebration" width="400" height="200" title="A lion would never cheat, but a tiger would!" >
+                        <img src="images/Tiger.gif" alt="Tiger Celebration" width="400" height="200" title="A lion would never cheat, but a tiger would!" >
                     </div>
                 </section>
             </div>
         </main>
-        <script src="api.js"></script>
+        <script src="js/api.js"></script>
+        <script src="js/slideshow.js"></script>
     </body>
-    <footer>
+    <footer id="contact-footer">
   <p>Copyright ©2025 by Makaden Espinosa</p>
   <p>Contact me: <a href="mailto:mespinosa@student.neumont.edu">Student Email</a> <a href="https://discordapp.com/users/sweettealove" target="_blank">Discord</a></p>
 </footer>

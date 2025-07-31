@@ -5,29 +5,24 @@ async function getQuote() {
     hideError();
     console.log('getQuote called');
     try {
-        const response = await fetch('https://corsproxy.io/?https://api.quotable.io/random');
+        // Use Advice Slip API (supports CORS, no API key needed)
+        const response = await fetch('https://api.adviceslip.com/advice');
         console.log('Fetch response:', response);
         if (!response.ok) {
             throw new Error('Quote not found. Please try again later');
         }
-        let quoteData;
-        const contentType = response.headers.get('content-type');
-        if (contentType && contentType.includes('application/json')) {
-            quoteData = await response.json();
-        } else {
-            const text = await response.text();
-            try {
-                quoteData = JSON.parse(text);
-            } catch (e) {
-                throw new Error('Failed to parse quote data.');
-            }
-        }
+        const data = await response.json();
+        // Advice Slip API returns { slip: { id, advice } }
+        const quoteData = {
+            content: data.slip.advice,
+            author: 'Advice Slip'
+        };
         console.log('Quote data:', quoteData);
         displayQuote(quoteData);
     } catch (error) {
         console.error('Error fetching quote:', error);
-        showError('Error: ' + error.message + ' Showing fallback quote.');
-        // Fallback quote in case the API fails (The website went down recently)
+        //showError('Error: ' + error.message + ' Showing fallback quote.');
+        // Fallback quote in case the API fails (The website went down recently but should be back up soon)
         const fallbackQuote = {
             content: "The only way to do great work is to love what you do.",
             author: "Steve Jobs"

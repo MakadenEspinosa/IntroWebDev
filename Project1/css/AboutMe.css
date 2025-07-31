@@ -9,7 +9,7 @@ html {
 }
 
 body{
-    background-image: url('GolfCourse.jpg');
+    background-image: url('../images/GolfCourse.jpg');
     background-size: cover;
     background-position: center;
     font-family: "Segoe UI", sans-serif;
