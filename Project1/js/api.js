@@ -5,17 +5,34 @@ async function getQuote() {
     hideError();
     console.log('getQuote called');
     try {
-        const response = await fetch('https://api.quotable.io/random');
+        const response = await fetch('https://corsproxy.io/?https://api.quotable.io/random');
         console.log('Fetch response:', response);
         if (!response.ok) {
             throw new Error('Quote not found. Please try again later');
         }
-        const quoteData = await response.json();
+        let quoteData;
+        const contentType = response.headers.get('content-type');
+        if (contentType && contentType.includes('application/json')) {
+            quoteData = await response.json();
+        } else {
+            const text = await response.text();
+            try {
+                quoteData = JSON.parse(text);
+            } catch (e) {
+                throw new Error('Failed to parse quote data.');
+            }
+        }
         console.log('Quote data:', quoteData);
         displayQuote(quoteData);
     } catch (error) {
         console.error('Error fetching quote:', error);
-        showError('Error: ' + error.message);
+        showError('Error: ' + error.message + ' Showing fallback quote.');
+        // Fallback quote in case the API fails (The website went down recently)
+        const fallbackQuote = {
+            content: "The only way to do great work is to love what you do.",
+            author: "Steve Jobs"
+        };
+        displayQuote(fallbackQuote);
     } finally {
         hideLoading();
     }
